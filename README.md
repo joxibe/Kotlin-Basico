@@ -72,3 +72,15 @@ fun main(args: Array<String>) {
     println("Hello world")
 }
 ```
+
+## Variables en Kotlin
+Sirve para almacenar datos temporales y utilizarlos a lo largo de nuestro código.. En kotlin las variables solo pueden almacenar un solo dato.
+
+**Tipos de variables**
+ - **VAR** : Son variables de lectura y escritura, estas variables el valor puede cambiarse.
+
+ - **VAL** : Son variables de solo lectura, dichas variables una vez asignado el valor no puede ser cambiado posteriormente.
+
+ - **CONST** : es una variante de las variables de solo lectura, estas se definen fuera de la función y se escriben con la palabra reservada const seguida de la palabra reservada val, este tipo de variables son usada para valores que nunca cambian.
+
+En Kotlin no se puede cambiar el tipo de dato con que se a definido una variable, si la variable se definio con el tipo de dato String solo podremos actualizar dicho valor por otro String, por ejemplo no podemos pasar de un string a un numero.
