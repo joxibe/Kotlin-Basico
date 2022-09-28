@@ -109,5 +109,8 @@ En Kotlin no se puede cambiar el tipo de dato con que se a definido una variable
     //Interpolacion o templates
     var nombreCompleto = "Mi nombre es $giuseppe apellido $apellido"
     print(nombreCompleto)
-
 ```
+
+# Modificadores y tipos de datos
+**Que es un tipo de dato**
+Los enteros, las cadenas de texto, los booleans. El tipo de valor que van a tener nuestras variables
