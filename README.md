@@ -113,4 +113,5 @@ En Kotlin no se puede cambiar el tipo de dato con que se a definido una variable
 
 # Modificadores y tipos de datos
 **Que es un tipo de dato**
+
 Los enteros, las cadenas de texto, los booleans. El tipo de valor que van a tener nuestras variables
