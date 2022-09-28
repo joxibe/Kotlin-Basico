@@ -210,7 +210,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-## While Do while
+## While Dowhile
 ```
 fun main(args: Array<String>) {
     var contador = 10
