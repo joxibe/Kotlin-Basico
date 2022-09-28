@@ -7,7 +7,7 @@
 # Hola Mundo Kotlin
 - [Hola mundo con Kotlin](#hola-mundo)
 - [Variables en Kotlin](@variables-en-kotlin)
-- [Tipos de variables]{#tipos-de-variables)
+- [Tipos de variables](#tipos-de-variables)
 - [Modificadores y tipos de datos](#modificadores-y-tipos-de-datos)
 - [Operaciones con los tipos de datos](#operaciones)
 - [Programacion Funcional](#programacion-funcional)
