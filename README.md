@@ -117,11 +117,9 @@ En Kotlin no se puede cambiar el tipo de dato con que se a definido una variable
 ```
 
 # Modificadores y tipos de datos
-**Que es un tipo de dato**
-
-Los enteros, las cadenas de texto, los booleans. El tipo de valor que van a tener nuestras variables
-
-**Que es un tiop de dato primitivo**
-
-Son los tipos de datos originales de un lenguaje de programacion
+ - **Que es un tipo de dato**: Los enteros, las cadenas de texto, los booleans. El tipo de valor que van a tener nuestras variables
+ - **Que es un tiop de dato primitivo**: Son los tipos de datos originales de un lenguaje de programacion
+ - **Kotlin: todo es un objeto**: Kotlin trae por defecto objetos, que parecen primitivos pero no lo son, String, Int, Boolean
+ - **Ventajas de tratar como objetos**: Posibilidad de crear funciones especificas para este tipo de trabajo, extender del lenguaje para crear nuevas funciones que permitan a tu equpo evitar repertir codigo y mantener una base de codigo saludable
+ - **Retrocompatibilidad con java**: Debido a que kotlin tiene que compilar el codigo que nosotros escribimos y hacerlo interoperable con java, debe seguir algunas reglas. Un entero que puede ser nulo, no se convertira a primitido. Pero un entero que no puede ser nulo se convertira a primitivo
 
