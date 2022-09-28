@@ -83,4 +83,16 @@ Sirve para almacenar datos temporales y utilizarlos a lo largo de nuestro códig
 
  - **CONST** : es una variante de las variables de solo lectura, estas se definen fuera de la función y se escriben con la palabra reservada const seguida de la palabra reservada val, este tipo de variables son usada para valores que nunca cambian.
 
+```
+//Tiempo de compilacion
+const val PI = 3.1416
+fun main(args: Array<String>) {
+    //Tiempo de ejecucion
+    var dinero = 10
+    dinero = 5
+
+    val nombre = "Maria"
+}
+```
+
 En Kotlin no se puede cambiar el tipo de dato con que se a definido una variable, si la variable se definio con el tipo de dato String solo podremos actualizar dicho valor por otro String, por ejemplo no podemos pasar de un string a un numero.
