@@ -148,3 +148,34 @@ Dependiendo del tipo de dato que tengas podrás utilizar todos o solamente algun
 Con esto espero que hayas obtenido una idea sobre cómo funcionan las operaciones, queda de parte de ti si prefieres utilizar la versión larga del operator fun o el operador directamente.
 
 Ten en cuenta que si las operator fun se inventaron para que puedas reducir tu código a operaciones con símbolos ¿por algo será, no?
+
+## Programacion funcional
+- **Paradigma imperativo**: se basa en modificar el estado de tu programa modificando estados dentro del mismo. Se centra en describir como funciona un programa
+- **Paradigam Funcional**: es declarativo, expresa la logica de un programa sin decribir lo que hace, se enfoca en lo qu el programa debe hacer no en como lo hace
+- **Nunca mutable siempre inmutable**: UN elemento es mutable cuando puede cambiar, inmutable cuando no. Es recomendable usar variables de solo lectura y estructuras de datos no mutablles
+- **Las funciones son objetos**: las funciones pueden almacenarse en variables, pasarse como parametros y tratarse como cualquier objeto
+- **Usa funciones puras**: Recibe siempre los mismos parametros y devuelve siempre el mismo resultado. NO puede verse afectada por elementos fuera de su entorno
+
+## Estructuras de control if
+```
+fun main(args: Array<String>) {
+    val nombre = "jose"
+
+    if (nombre.isNotEmpty()){
+        println("Hola $nombre como estas?")
+        println("Tu nombre tiene ${nombre.length} letras")
+    } else {
+        println("Lo lamento, tu nombre esta vacio")
+    }
+
+    val mensaje : String = if (nombre.length > 4){
+        "Tu nombre es largo"
+    } else if (nombre.isEmpty()){
+        "Tu nombre esta vacio"
+    }
+    else {
+        "Tu nombre es corto"
+    }
+    println(mensaje)
+}
+```
