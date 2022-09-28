@@ -123,3 +123,28 @@ En Kotlin no se puede cambiar el tipo de dato con que se a definido una variable
  - **Ventajas de tratar como objetos**: Posibilidad de crear funciones especificas para este tipo de trabajo, extender del lenguaje para crear nuevas funciones que permitan a tu equpo evitar repertir codigo y mantener una base de codigo saludable
  - **Retrocompatibilidad con java**: Debido a que kotlin tiene que compilar el codigo que nosotros escribimos y hacerlo interoperable con java, debe seguir algunas reglas. Un entero que puede ser nulo, no se convertira a primitido. Pero un entero que no puede ser nulo se convertira a primitivo
 
+## Operaciones
+En Kotlin las operaciones son traducidas a funciones interiormente por el compilador. La operación val tercerValor = primerValor + segundoValor es lo mismo que decir tercerValor = primerValor.plus(segundoValor).
+
+En la siguiente tabla te voy a dejar las operaciones que vas a poder realizar con los distintos tipos de datos y si te encuentras con alguno que no permita realizar esa operación puedes crearla por tu cuenta. Recuerda que Kotlin te permite extender el lenguaje para aprovechar estas funcionalidades.
+
+Operaciones más utilizadas
+Expresión	Función	Operator Fun
+a + b	c = a + b	public operator fun plus(other: Int): Int
+a - b	c = a - b	public operator fun minus(other: Int): Int
+a * b	c = a * b	public operator fun times(other: Int): Int
+a / b	a = a / b	public operator fun div(other: Int): Int
+a % b	c = a % b	public operator fun rem(other: Int): Int
+a++	c = a++	public operator fun inc(): Int
+a–	c = a–	public operator fun dec(): Int
+a > b	c = a > b	public override operator fun compareTo(other: Int): Int
+a < b	c = a < b	public override operator fun compareTo(other: Int): Int
+a >= b	c = a >= b	public override operator fun compareTo(other: Int): Int
+a <= b	c = a <= b	public override operator fun compareTo(other: Int): Int
+a != b	c = a != b	public open operator fun equals(other: Any?): Boolean
+.
+Dependiendo del tipo de dato que tengas podrás utilizar todos o solamente algunas de estas operaciones, por ejemplo si tienes una variable del tipo de dato String no vas a poder dividirla, a menos que tú crees esa función. Sin embargo, sí vas a poder sumar dos variables del tipo de dato String para obtener el valor de dicha suma.
+
+Con esto espero que hayas obtenido una idea sobre cómo funcionan las operaciones, queda de parte de ti si prefieres utilizar la versión larga del operator fun o el operador directamente.
+
+Ten en cuenta que si las operator fun se inventaron para que puedas reducir tu código a operaciones con símbolos ¿por algo será, no?
