@@ -227,3 +227,23 @@ fun main(args: Array<String>) {
     } while(numeroAleatoreo > 50)
 }
 ```
+
+## Ciclos
+```
+fun main(args: Array<String>) {
+    val listaDeFrutas: List<String> = listOf("Manzana", "Pera", "Frambuesa", "Durazno")
+    //para fruta en listadefrutas ejecuta este codigo
+    for (fruta in listaDeFrutas){
+        println("Hoy voy a comer $fruta")
+    }
+    listaDeFrutas.forEach{ fruta ->  println("Hoy voy a comer $fruta")}
+
+    //MAP -> lo mejor de kotlin
+    val caracteresDeFruta: List<Int> = listaDeFrutas.map { fruta -> fruta.length }
+    println(caracteresDeFruta)
+     
+    val listaFiltrada = caracteresDeFruta.filter { caracterFruta -> caracterFruta > 5 }
+    println(listaFiltrada)
+}
+```
+## Null safety
