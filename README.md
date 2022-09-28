@@ -96,3 +96,18 @@ fun main(args: Array<String>) {
 ```
 
 En Kotlin no se puede cambiar el tipo de dato con que se a definido una variable, si la variable se definio con el tipo de dato String solo podremos actualizar dicho valor por otro String, por ejemplo no podemos pasar de un string a un numero.
+
+## Tipos de variables
+```
+    val primerValor = 20
+    val segundoValor = 10
+    val tercerValor = primerValor - segundoValor
+    println(tercerValor)
+
+    val apellido = "Vetri"
+    val giuseppe = "Giuseppe"
+    //Interpolacion o templates
+    var nombreCompleto = "Mi nombre es $giuseppe apellido $apellido"
+    print(nombreCompleto)
+
+```
