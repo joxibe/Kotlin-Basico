@@ -12,6 +12,7 @@
 - [Operaciones con los tipos de datos](#operaciones)
 - [Programacion Funcional](#programacion-funcional)
 - [Estructuras de control: if](#estructuras-de-control-if)
+- [Estructuras de control: when](#estructuras-de-control-when)
 
 # Conceptos basicos
 - [Bucles: While y Do While](#while-dowhile)
@@ -175,6 +176,35 @@ fun main(args: Array<String>) {
     }
     else {
         "Tu nombre es corto"
+    }
+    println(mensaje)
+}
+```
+
+## Estructuras de control when
+```
+fun main(args: Array<String>) {
+    val nombreColor = "Carmesi"
+
+    when (nombreColor){
+        "Amarillo" -> println("El amarillo es el color  de la alegria")
+        "Rojo", "Carmesi" -> println("El '$nombreColor' simboliza el calor")
+        else -> println("Error, el color '$nombreColor' no esta en mis paramatros")
+    }
+
+    val code = 499
+    when (code){
+        in 200..299 -> println("Todo esta bien")///in: se encuentra en
+        in 400..500 -> println("Algo ha fallado")
+        else -> println("Codigo $code desconocido")
+    }
+
+    val tallaZapatos = 38
+    val mensaje = when (tallaZapatos){
+        39, 40 -> "NO esta disponible"
+        in 41..44 -> "Si esta disponible"
+        45 -> "Lo siento, no hay disponibilidad"
+        else -> println("lo siento, solo hay disponibilidad para tallas 39, 40, 41, 42, 43, 44")
     }
     println(mensaje)
 }
