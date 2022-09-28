@@ -1,7 +1,7 @@
 # Kotlin-Basico
 
 # Introduccion Kotlin
-- [Ques es Kotlin](#koltin)
+- [Ques es Kotlin](#kotlin)
 - [Que es la Java Vitual Machine](#java-virtual-machine)
 
 # Hola Mundo Kotlin
@@ -43,3 +43,12 @@
 
 # Proyecto: bola magica
 [Proyecto](#proyecto)
+
+
+## Kotlin
+Fue creado por JETBRAIN, nacio en el 2010 y no solo se usa para desarrollar aplicaciones en Android:
+ - Backend development: con frameworks como Spring, Micronaut o Ktor.
+ - De forma nativa: puede correr en windows y otras plataformas de forma nativa
+ - Scripts: permite crear scripts que pueden ser ejecutar en cualquier entorno
+ - Multiplatform: permite crea logica de negocio que se comparte entre apps de Android e IOS.
+
