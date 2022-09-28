@@ -209,3 +209,21 @@ fun main(args: Array<String>) {
     println(mensaje)
 }
 ```
+
+## While Do while
+```
+fun main(args: Array<String>) {
+    var contador = 10
+    //mientras que el contador sea mayor que 0 ejecuta contador --
+    while(contador > 0){
+        println("El valor de contador es $contador")
+        contador --
+    }
+
+    do{
+        println("Generando un numero aleatoreo...")
+        val numeroAleatoreo = (0..100).random()
+        println("El numero generado es $numeroAleatoreo")
+    } while(numeroAleatoreo > 50)
+}
+```
