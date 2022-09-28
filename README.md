@@ -19,7 +19,7 @@
 - [Ciclos](#ciclos)
 - [Null-Safety](#null-safety)
 - [Valores nulos, Double bang y como solucionarlos](#valores-nulos-double-bang-y-como-solucionarlos)
-- [Try catch](#try-cathc)
+- [Try catch](#try-catch)
 - [Elvis operator](#elvis-operator)
 
 # Collection Kotlin
@@ -247,3 +247,44 @@ fun main(args: Array<String>) {
 }
 ```
 ## Null safety
+Si tenemos un boolean, tenemos dos posibles valores (true o fasle). Pero existe un tercer valor (Null). Null indica que el contenido de nuestra variable no existe, que esta apuntano a una referencia de memoria que no existe.(referencia nula).
+
+**Origen de los boolean de tres valores**
+Un booleano puede tener solo dos valores true o false. Pero un boolean nullable aquel que puede ser nulo, tiene tres: true, false, null. La referencia nula o null pointer fue creada por Sir Tony Hoare en 1965.
+
+## Valores nulos double bang y como solucionarlos
+ - Los null son incomprendidos
+```
+var segundoNombre : String? = "Antonio"
+```
+ - El compilador es capaz de interpretar estos tipos y advertirnos de lo que puede ocurrir al correr nuestro programa
+ - **Boy Scout**: Deja siempre el codigo mejor de lo que lo encontraste
+ - **Safe Calls**: son una herramienta del lenguaje que nos ayudan a ejecutar un codigo cuando una variable del tipo nullable no es nula
+```
+println(segundoNombre?.length())
+```
+  - **Double bang**: se indica con dos simbolos de exclamacion '!!', con esto, el compilador sabe que en este pundo la variable no puede ser nula
+  - **Interoperabilidad**: al ejecutar condigo escrigo por otras personas en java desde kotlin, puedes encontrar este tipo de variable 'Integer!'
+
+## Try catch
+```
+fun main(args: Array<String>) {
+    var nombre : String? = null
+    //Evitar el nullPointerException
+    try {
+        throw NullPointerException("Referencia nula")
+    } catch (e : NullPointerException){
+        //capturamos la excepcion
+        println("Ha ocurrido un error")
+    } finally {
+        println("Finalmente ha ocurrido un error.... cerrando aplicacion")
+    }
+
+    println("-----------------------------------------")
+
+    val primerValor = 10
+    val segundoValor = 0
+    val resultado : Int = try{ primerValor / segundoValor } catch (e : Exception) { 0 }
+    println(resultado)
+}
+```
