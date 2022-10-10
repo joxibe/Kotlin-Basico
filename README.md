@@ -414,3 +414,27 @@ fun main(args: Array<String>) {
 }
 ```
 
+## Sets
+fun main(args: Array<String>) {
+    //Sets inmutables
+    val vocalesRepetidas = setOf("a", "e", "i", "o", "u", "a", "e", "i", "o", "u")
+    println(vocalesRepetidas)
+
+    //Set mutable
+    val numerosFavoritos = mutableSetOf(1, 2, 3, 4)
+    val nombresFavoritos = mutableSetOf("Ximena", "Jose", "Bella", "Sam", "Maria Jose")
+    println(numerosFavoritos)
+    numerosFavoritos.add(5)
+    numerosFavoritos.add(5) //no permite valores duplicados
+    println(numerosFavoritos)
+
+    //Eliminar elementos
+    numerosFavoritos.remove(5)
+    println(numerosFavoritos)
+    nombresFavoritos.remove("Ximena")
+    println(nombresFavoritos)
+
+    val valorDelSet = numerosFavoritos.firstOrNull{ numero -> numero > 2 }
+    println(valorDelSet)
+}
+
