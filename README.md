@@ -444,3 +444,14 @@ fun main(args: Array<String>) {
  
  **Sintaxis de una funcion**
   - Las funciones mas basicas se componen de 4 partes. Inicia con el nombre; toda funcion inicia con la palabra reservada fun y luego el nombre de la funcion
+  - Luego tenemos los parametros, que son las variables que le damos a la funcion para que las use en el codigo que tiene dentro
+  - Sigue el tipo de retorno, es decir, el tipo quie va a ejecutar una vez ejecuta la funcion
+  - Para terminar tenemos el codigo que vamos a ejecutar cuando llamemos la funcion
+ ```
+   "nombre"         "parametros"            "tipo retorno"   "codigo que se ejecuta"  
+      |               /       \                   |           /                    \
+ fun suma(primerValor: Int, sedungoValor: Int) : Int { return primerValor + segundoValor }
+ ```
+ 
+**Todas las funciones en Kotlin devuelven un valor**
+La palabra reservada **return** indica el valor que vamor a retornar, Pero que ocurre su ni no queremos devolver nada?
