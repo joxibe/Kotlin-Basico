@@ -584,3 +584,33 @@ fun main(args: Array<String>) {
     println(moviles)
 } 
 ```
+ 
+## Apply
+ El proposito de la funcion apply es tomar como alcance al objeto recibidor T sobre el que es invocado, aplicar las sentencias del parametro block que recibe sobre dicho contexto y retornar el mismo objeto modificado
+ ```
+ fun main(args: Array<String>) {
+    val moviles = mutableListOf("Poco F3", "Google Pixel Xl", "Samsung s9", "Huawei p10", "Google pixel")
+        .apply {
+            removeIf { movil -> movil.contains("Google")}
+        }
+    println(moviles)
+
+    val colores : MutableList<String>? = mutableListOf("Amarillo", "Azul", "Rojo")
+    colores?.apply {
+        println("Nuestros colores son $this")
+        println("Cantidad de colores es $size")
+    }
+}
+ ```
+ 
+ ## Also
+ Nos permite obtener una variable, luego ejecutar un codigo con esa variable y luego devolverla como parametro para que pueda ser usada por una funcion mas adelante
+ ```
+ fun main(args: Array<String>) {
+    val moviles = mutableListOf("Poco F3", "Google Pixel Xl", "Samsung s9", "Huawei p10", "Google pixel")
+        .also {
+            lista -> println("El valor original de la lista es $lista")
+        }.asReversed()
+    println(moviles)
+}
+ ```
