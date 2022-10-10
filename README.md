@@ -491,4 +491,18 @@ fun String.randomCase() : String {
  ```
 
 ## Tipos de paramtros en las funciones
+ ```
+ 
+fun main(args: Array<String>) {
+    imprimirNombre(nombre = "Jose", segundoNombre = "Alfredo", apellido = "Rosero")
+}
+
+//Creamos nuestra funcion
+fun imprimirNombre(nombre: String, segundoNombre : String, apellido: String){
+    println("Mi nombre completo es $nombre $segundoNombre $apellido")
+}
+ ```
+ 
+ ## Lambdas
+ Funciones anonimas
  
