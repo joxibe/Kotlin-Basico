@@ -338,3 +338,40 @@ fun main(args: Array<String>) {
     println("Array como lista ${myArray.toList()}")
 }
 ```
+
+## Orden de listas con funciones
+```
+fun main(args: Array<String>) {
+    val numerosDeLoteria = listOf(11, 22, 43, 56, 78, 66)
+
+    //Ordenar de forma ascendente
+    val numerosSorted = numerosDeLoteria.sorted()
+    println(numerosSorted)
+
+    //Ordenar de forma descendiente
+    val numerosDeLoteriaDescendientes = numerosDeLoteria.sortedDescending()
+    println(numerosDeLoteriaDescendientes)
+
+    //Ordenar dependiendo de una conexion
+    //si el numero es menor que 50 va de ultimo y el mayor de primero
+    val ordenarPorMultiplos = numerosDeLoteria.sortedBy { numero ->  numero < 50 }
+    println(ordenarPorMultiplos)
+
+    //Ordenar de forma aleatorea
+    val numerosAleatorios = numerosDeLoteria.shuffled()
+    println(numerosAleatorios)
+
+    //Ordenar en reversa
+    val numerosEnReversa = numerosDeLoteria.reversed()
+    println(numerosEnReversa)
+
+    //Programacion funcional
+    //MAP
+    val mensajesDeNumeros = numerosDeLoteria.map { numero -> "Tu numero de loteria es = $numero" }
+    println(mensajesDeNumeros)
+
+    //filter
+    val numerosFiltrados = numerosDeLoteria.filter { numero -> numero > 50 }
+    println(numerosFiltrados)
+}
+```
