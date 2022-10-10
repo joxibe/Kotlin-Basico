@@ -375,3 +375,42 @@ fun main(args: Array<String>) {
     println(numerosFiltrados)
 }
 ```
+
+## Maps
+Es una coleccion que almacena sus elementos (entradas) en forma de partes clave-valor, quiere decir, que a cada clave le corresponde un solo valor y sera unica como si fuera un identificador
+```
+fun main(args: Array<String>) {
+    val edadDeSuperHeroes = mapOf(
+        "Ironman" to 35,
+        "Spiderman" to 23,
+        "Capitan America" to 99
+    )
+    println(edadDeSuperHeroes)
+
+    val edadSuperHeroesMutable = mutableMapOf(
+        "Ironman" to 35,
+        "Spiderman" to 23,
+        "Capitan America" to 99
+    )
+    println(edadDeSuperHeroes)
+
+    //Agregar elementos
+    edadSuperHeroesMutable.put("Wolverine", 45)
+    println(edadSuperHeroesMutable)
+
+    edadSuperHeroesMutable["Storm"] = 30
+    println(edadSuperHeroesMutable)
+
+    //Obtener elemento de mapa
+    val edadIronman = edadSuperHeroesMutable["Ironman"]
+    println(edadIronman)
+
+    //Eliminar elemento de mapa
+    edadSuperHeroesMutable.remove("Wolverine")
+    println(edadSuperHeroesMutable)
+
+    println(edadSuperHeroesMutable.keys)
+    println(edadSuperHeroesMutable.values)
+}
+```
+
