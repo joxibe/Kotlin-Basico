@@ -571,3 +571,16 @@ fun main(args: Array<String>) {
 }
  ```
  
+## Run
+ Ejecuta una serie de operaciones luego de declarar una variable
+```
+
+fun main(args: Array<String>) {
+    val moviles = mutableListOf("Poco F3", "Google Pixel Xl", "Samsung s9", "Huawei p10", "Google pixel")
+        .run {
+            removeIf { movil -> movil.contains("Google")}
+            this
+        }
+    println(moviles)
+} 
+```
