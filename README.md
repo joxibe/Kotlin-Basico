@@ -434,6 +434,7 @@ fun main(args: Array<String>) {
     nombresFavoritos.remove("Ximena")
     println(nombresFavoritos)
 
+    //Obetenemos el primer numero mayor a 2
     val valorDelSet = numerosFavoritos.firstOrNull{ numero -> numero > 2 }
     println(valorDelSet)
 }
