@@ -439,3 +439,8 @@ fun main(args: Array<String>) {
     println(valorDelSet)
 }
 
+ ## Que son las funciones
+ Una funcion es un codigo que se ejecuta cada vez que lo llamamos. Las hemos usado anteriormente, pero ahora vamos a profundizar
+ 
+ **Sintaxis de una funcion**
+  - Las funciones mas basicas se componen de 4 partes. Inicia con el nombre; toda funcion inicia con la palabra reservada fun y luego el nombre de la funcion
