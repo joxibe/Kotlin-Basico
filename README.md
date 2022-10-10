@@ -459,3 +459,36 @@ La palabra reservada **return** indica el valor que vamor a retornar, Pero que o
  
  - En ese caso la funcion regresaria Unit
  - En este caso Kotlin te recomendara eliminar el tipo de retono de la funcion
+ ```
+ fun imprimirNombre(nombre : String, apellido: String){
+     print("Mi nombre es $nombre y mi apellido es $apellido)
+ }
+ ```
+ 
+ ## Funciones y funciones de extencion
+ ```
+ 
+fun main(args: Array<String>) {
+    val fraseAleatoria = "En platzi nunca paramos de aprender".randomCase()
+    imprimirFrase(fraseAleatoria)
+}
+
+//Funcion que devuelve Unit
+fun imprimirFrase(frase : String) : Unit{
+    println("Tu frase es: $frase")
+}
+
+//Creamos nuestra funcion con extencion
+fun String.randomCase() : String {
+    val numeroAleatorio = 0.. 99
+    val resultadoAleatorio = numeroAleatorio.random()
+    return if (resultadoAleatorio.rem(2) == 0){
+        this.toUpperCase()
+    } else {
+        this.toLowerCase()
+    }
+}
+ ```
+
+## Tipos de paramtros en las funciones
+ 
