@@ -288,3 +288,13 @@ fun main(args: Array<String>) {
     println(resultado)
 }
 ```
+
+## Elvis operator
+```
+fun main(args: Array<String>) {
+    //operador elvis ?: nos aseguramos que devuelva un valor por defecto
+    var nombre: String? = null
+    val caracteresDeNombre: Int = nombre?.length ?: 0
+    println(caracteresDeNombre)
+}
+```
