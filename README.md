@@ -505,4 +505,69 @@ fun imprimirNombre(nombre: String, segundoNombre : String, apellido: String){
  
  ## Lambdas
  Funciones anonimas
+ ```
+ fun main(args: Array<String>) {
+    //Lambda
+    val myLambda : (String) -> Int = { valor -> valor.length }
+    //ejecutamos la lambda
+    val lambdaEjecutada = myLambda("Hola Platzi")
+    println(lambdaEjecutada)
+    
+    val saludos = listOf("Hola", "Hello", "Ciao")
+    val longitudDeSaludos = saludos.map(myLambda)
+    println(longitudDeSaludos)
+}
+
+ ```
+ 
+ ## High order functions
+ Las funciones de orden superior son funciones que pueden recibir como parametros otras funciones y/o devolverlas como resultados
+ ```
+ fun main(args: Array<String>) {
+    val largoValorInicial = superFuncion(valorInicial = "Hola!") { valor ->
+        valor.length
+    }
+    println(largoValorInicial)
+
+    val lambda: () -> String = funcionInception("Enrique")
+    val valorLambda: String = lambda()
+    println(valorLambda)
+}
+
+fun superFuncion(valorInicial: String, block : (String) -> Int) : Int{
+    return block(valorInicial)
+}
+
+//Devolver una lambda
+fun funcionInception(nombre : String) : () -> String {
+    return {
+        "Hola desde la lambda $nombre"
+    }
+}
+ ```
+ ## Let
+```
+fun main(args: Array<String>) {
+    var nombre: String? = null
+    nombre?.let {
+        valor -> println("El nombre no es nulo, es $valor")
+    }
+
+    nombre = "Jose"
+    nombre.let { valor -> println("El nombre no es nulo, es $valor")
+    }
+}
+ ```
+ 
+## With
+ Nos ayuda a acceder directamente a las propiedades de la variable o a la misma variable usando this
+ ```
+ fun main(args: Array<String>) {
+    val colores = listOf("Azul", "Amarillo", "Rojo")
+    with(colores){
+        println("Nuestros colores son $this")
+        println("Esta lista tiene una cantidad de $size colores")
+    }
+}
+ ```
  
