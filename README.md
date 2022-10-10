@@ -298,3 +298,43 @@ fun main(args: Array<String>) {
     println(caracteresDeNombre)
 }
 ```
+
+## Listas
+```
+fun main(args: Array<String>) {
+    //Lista inmutable
+    val listaDeNombre = listOf<String>("Juan", "Enrique", "Camila")
+    println(listaDeNombre)
+
+    //Lista mutable
+    val listaVacia = mutableListOf<String>()
+    listaVacia.add("Juan")
+    println(listaVacia)
+
+    //Obtener valor de la lista
+    val valorUsandoGet = listaVacia.get(0)
+    println(valorUsandoGet)
+
+    val valorUsandoOperador = listaVacia[0]
+    println(valorUsandoOperador)
+
+    //Otra forma
+    val primerValor = listaDeNombre.firstOrNull()
+    println(primerValor)
+
+    //Eliminar elementos de una lista
+    listaVacia.removeAt(0)
+    println(listaVacia)
+
+    //Otra forma
+    listaVacia.add("Ximena")
+    listaVacia.removeIf { caracteres -> caracteres.length > 4 }
+    println(listaVacia)
+
+    //Arrays
+    val myArray = arrayOf(1, 2, 3, 4)
+    println("Nuestro array $myArray")
+    //Convertir array en lista
+    println("Array como lista ${myArray.toList()}")
+}
+```
