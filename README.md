@@ -454,4 +454,8 @@ fun main(args: Array<String>) {
  ```
  
 **Todas las funciones en Kotlin devuelven un valor**
+ 
 La palabra reservada **return** indica el valor que vamor a retornar, Pero que ocurre su ni no queremos devolver nada?
+ 
+ - En ese caso la funcion regresaria Unit
+ - En este caso Kotlin te recomendara eliminar el tipo de retono de la funcion
